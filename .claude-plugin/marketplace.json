@@ -7,8 +7,7 @@
     "description": "Personal collection of custom Claude Code skills for enhanced productivity and specialized workflows",
     "version": "1.0.0"
   },
-  "plugins": [],
-  "skills": [
+  "plugins": [
     {
       "name": "ux-growth",
       "source": "skills/ux-growth",
