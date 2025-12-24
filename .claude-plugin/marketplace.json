@@ -1,16 +1,18 @@
 {
   "name": "claude-skills",
-  "displayName": "Claude Skills",
-  "description": "Personal collection of custom Claude Code skills for enhanced productivity and specialized workflows",
-  "version": "1.0.0",
-  "author": "jmblog",
+  "owner": {
+    "name": "Yoshihide Jimbo"
+  },
+  "metadata": {
+    "description": "Personal collection of custom Claude Code skills for enhanced productivity and specialized workflows",
+    "version": "1.0.0"
+  },
+  "plugins": [],
   "skills": [
     {
       "name": "ux-growth",
-      "displayName": "UX Growth",
-      "description": "Analyze and improve user experience and growth using evidence-based UX psychology principles",
-      "version": "1.0.0",
-      "path": "skills/ux-growth"
+      "source": "skills/ux-growth",
+      "description": "Analyze and improve user experience and growth using evidence-based UX psychology principles"
     }
   ]
 }
