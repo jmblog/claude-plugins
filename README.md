@@ -13,7 +13,6 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 ### Install skills
 
 ```bash
-# Install UX Growth skill
 /plugin install ux-growth@claude-skills
 ```
 
