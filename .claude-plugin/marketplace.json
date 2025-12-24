@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "ux-growth",
-      "source": "skills/ux-growth",
+      "source": "./skills/ux-growth",
       "description": "Analyze and improve user experience and growth using evidence-based UX psychology principles"
     }
   ]
