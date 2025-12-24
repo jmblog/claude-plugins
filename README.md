@@ -64,12 +64,31 @@ claude-skills/
 └── README.md
 ```
 
+### Validating Changes
+
+Before pushing changes to GitHub, validate the marketplace configuration:
+
+```bash
+# Navigate to the repository
+cd /path/to/claude-skills
+
+# Validate marketplace.json
+claude plugin validate .
+```
+
+This will check:
+- JSON syntax
+- Required fields (name, owner, plugins)
+- Plugin source paths
+- Schema compliance
+
 ### Adding New Skills
 
 1. Create a new directory under `skills/`
 2. Add a `SKILL.md` file with YAML frontmatter
-3. Update `.claude-plugin/marketplace.json`
-4. Commit and push to GitHub
+3. Update `.claude-plugin/marketplace.json` to add the new skill to the `plugins` array
+4. **Validate the configuration**: Run `claude plugin validate .`
+5. Commit and push to GitHub
 
 ## License
 
