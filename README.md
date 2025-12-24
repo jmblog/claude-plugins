@@ -16,6 +16,20 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 /plugin install ux-growth@claude-skills
 ```
 
+### Update skills
+
+To get the latest version of skills from the marketplace:
+
+```bash
+# Update a specific skill
+/plugin update ux-growth@claude-skills
+
+# Or update all plugins/skills from all marketplaces
+/plugin update
+```
+
+After updating, restart Claude Code to load the changes.
+
 ## Available Skills
 
 ### UX Growth
@@ -89,6 +103,19 @@ This will check:
 3. Update `.claude-plugin/marketplace.json` to add the new skill to the `plugins` array
 4. **Validate the configuration**: Run `claude plugin validate .`
 5. Commit and push to GitHub
+
+### Updating Skills
+
+When you make changes to existing skills:
+
+1. Edit skill files in `skills/skill-name/`
+2. **Validate the configuration**: Run `claude plugin validate .`
+3. Commit and push to GitHub
+4. On other devices, update the skill:
+   ```bash
+   /plugin update ux-growth@claude-skills
+   ```
+5. Restart Claude Code to load the changes
 
 ## License
 
