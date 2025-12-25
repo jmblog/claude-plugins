@@ -13,7 +13,13 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 ### Install skills
 
 ```bash
-/plugin install ux-growth@claude-skills
+# Install all skills
+/plugin update
+
+# Or install specific skills
+/plugin install typescript-review@claude-skills
+/plugin install api-design@claude-skills
+/plugin install test-strategy@claude-skills
 ```
 
 ### Update skills
@@ -32,30 +38,17 @@ After updating, restart Claude Code to load the changes.
 
 ## Available Skills
 
-### UX Growth
+### TypeScript Development
 
-Analyze and improve user experience and growth using evidence-based UX psychology principles.
+- **typescript-review** - Review and improve TypeScript code quality, type safety, and best practices
+- **api-design** - Design and review REST/GraphQL APIs with best practices, consistency, and scalability
+- **test-strategy** - Plan and implement comprehensive testing strategies for software projects
+- **architecture-review** - Review and design software architecture for scalability, maintainability, and best practices
+- **database-design** - Design and review database schemas, queries, and data models for optimal performance and integrity
 
-**Use cases:**
-- UX analysis of websites or applications
-- Growth optimization recommendations
-- Conversion rate improvement strategies
-- Psychological design pattern applications
-- User behavior analysis
-- Evidence-based design improvements
+### UX & Design
 
-**What's included:**
-- 25+ UX psychology principles with detailed explanations
-- Systematic UX analysis framework with 10 evaluation categories
-- Implementation patterns and anti-patterns
-- Prioritization frameworks for improvements
-- A/B testing recommendations
-
-**Trigger examples:**
-- "Analyze the UX of this landing page"
-- "How can I improve conversion rates using psychology?"
-- "What psychological principles should I apply to this design?"
-- "Help me increase user engagement"
+- **ux-growth** - Analyze and improve user experience and growth using evidence-based UX psychology principles
 
 ## Usage
 
@@ -111,9 +104,9 @@ When you make changes to existing skills:
 1. Edit skill files in `skills/skill-name/`
 2. **Validate the configuration**: Run `claude plugin validate .`
 3. Commit and push to GitHub
-4. On other devices, update the skill:
+4. On other devices, update the skills:
    ```bash
-   /plugin update ux-growth@claude-skills
+   /plugin update
    ```
 5. Restart Claude Code to load the changes
 
