@@ -12,6 +12,31 @@
       "name": "ux-growth",
       "source": "./skills/ux-growth",
       "description": "Analyze and improve user experience and growth using evidence-based UX psychology principles"
+    },
+    {
+      "name": "typescript-review",
+      "source": "./skills/typescript-review",
+      "description": "Review and improve TypeScript code quality, type safety, and best practices"
+    },
+    {
+      "name": "api-design",
+      "source": "./skills/api-design",
+      "description": "Design and review REST/GraphQL APIs with best practices, consistency, and scalability"
+    },
+    {
+      "name": "test-strategy",
+      "source": "./skills/test-strategy",
+      "description": "Plan and implement comprehensive testing strategies for software projects"
+    },
+    {
+      "name": "architecture-review",
+      "source": "./skills/architecture-review",
+      "description": "Review and design software architecture for scalability, maintainability, and best practices"
+    },
+    {
+      "name": "database-design",
+      "source": "./skills/database-design",
+      "description": "Design and review database schemas, queries, and data models for optimal performance and integrity"
     }
   ]
 }
