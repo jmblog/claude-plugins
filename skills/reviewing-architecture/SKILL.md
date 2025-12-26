@@ -1,13 +1,9 @@
 ---
-name: architecture-review
+name: reviewing-architecture
 description: "Review and design software architecture for scalability, maintainability, and best practices. Use when users request: (1) Architecture review or design, (2) System design decisions, (3) Technology stack selection, (4) Scalability planning, (5) Microservices vs monolith decisions, or (6) Design pattern recommendations. Applies architectural patterns, SOLID principles, and industry best practices."
 ---
 
 # Architecture Review
-
-## Overview
-
-This skill provides comprehensive guidance for designing, reviewing, and improving software architecture. It focuses on scalability, maintainability, performance, security, and adherence to architectural best practices for modern web applications.
 
 ## Core Review Workflow
 

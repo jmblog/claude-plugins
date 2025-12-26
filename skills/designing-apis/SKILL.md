@@ -1,13 +1,9 @@
 ---
-name: api-design
+name: designing-apis
 description: "Design and review REST/GraphQL APIs with best practices, consistency, and scalability. Use when users request: (1) API design or review, (2) RESTful API planning, (3) GraphQL schema design, (4) API documentation review, (5) Endpoint naming and structure, or (6) API versioning strategies. Applies industry standards, REST principles, GraphQL best practices, and security considerations."
 ---
 
 # API Design
-
-## Overview
-
-This skill provides comprehensive guidance for designing, reviewing, and improving REST and GraphQL APIs. It focuses on consistency, scalability, security, developer experience, and adherence to industry standards.
 
 ## Core Design Workflow
 

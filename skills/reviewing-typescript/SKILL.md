@@ -1,13 +1,9 @@
 ---
-name: typescript-review
+name: reviewing-typescript
 description: "Review and improve TypeScript code quality, type safety, and best practices. Use when users request: (1) TypeScript code review, (2) Type safety improvements, (3) Best practice validation, (4) Performance optimization for TypeScript code, (5) Refactoring suggestions, or (6) Migration from JavaScript to TypeScript. Applies TypeScript-specific patterns, strict mode principles, and modern language features."
 ---
 
 # TypeScript Review
-
-## Overview
-
-This skill provides comprehensive TypeScript code review focusing on type safety, performance, maintainability, and best practices. It helps identify issues, suggest improvements, and ensure high-quality TypeScript codebases for both frontend and backend development.
 
 ## Core Review Workflow
 

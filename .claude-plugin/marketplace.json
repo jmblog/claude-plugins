@@ -9,33 +9,33 @@
   },
   "plugins": [
     {
-      "name": "ux-growth",
-      "source": "./skills/ux-growth",
+      "name": "improving-ux",
+      "source": "./skills/improving-ux",
       "description": "Analyze and improve user experience and growth using evidence-based UX psychology principles"
     },
     {
-      "name": "typescript-review",
-      "source": "./skills/typescript-review",
+      "name": "reviewing-typescript",
+      "source": "./skills/reviewing-typescript",
       "description": "Review and improve TypeScript code quality, type safety, and best practices"
     },
     {
-      "name": "api-design",
-      "source": "./skills/api-design",
+      "name": "designing-apis",
+      "source": "./skills/designing-apis",
       "description": "Design and review REST/GraphQL APIs with best practices, consistency, and scalability"
     },
     {
-      "name": "test-strategy",
-      "source": "./skills/test-strategy",
+      "name": "planning-tests",
+      "source": "./skills/planning-tests",
       "description": "Plan and implement comprehensive testing strategies for software projects"
     },
     {
-      "name": "architecture-review",
-      "source": "./skills/architecture-review",
+      "name": "reviewing-architecture",
+      "source": "./skills/reviewing-architecture",
       "description": "Review and design software architecture for scalability, maintainability, and best practices"
     },
     {
-      "name": "database-design",
-      "source": "./skills/database-design",
+      "name": "designing-databases",
+      "source": "./skills/designing-databases",
       "description": "Design and review database schemas, queries, and data models for optimal performance and integrity"
     }
   ]

@@ -1,13 +1,9 @@
 ---
-name: database-design
+name: designing-databases
 description: "Design and review database schemas, queries, and data models for optimal performance and integrity. Use when users request: (1) Database schema design, (2) Data modeling, (3) Query optimization, (4) Index strategy, (5) Migration planning, or (6) Database technology selection. Applies normalization principles, indexing strategies, and database best practices for SQL and NoSQL databases."
 ---
 
 # Database Design
-
-## Overview
-
-This skill provides comprehensive guidance for designing, reviewing, and optimizing database schemas and data models. It covers relational (SQL) and non-relational (NoSQL) databases, focusing on data integrity, performance, scalability, and best practices.
 
 ## Core Design Workflow
 
@@ -155,169 +151,18 @@ Structured evaluation framework:
 - Security considerations
 - Scalability review
 
-## Data Types Best Practices
+## Data Types
 
-### PostgreSQL
+For comprehensive guidance on choosing appropriate data types:
+- **PostgreSQL & MongoDB**: See [references/data-types.md](references/data-types.md)
+- **Database selection guide**: See [references/data-types.md](references/data-types.md)
 
-```sql
--- ✅ Good: Appropriate data types
-CREATE TABLE users (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  email VARCHAR(255) NOT NULL UNIQUE,
-  age INTEGER CHECK (age >= 0 AND age <= 150),
-  balance NUMERIC(10, 2) NOT NULL DEFAULT 0,
-  metadata JSONB,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
+## Indexing & Query Optimization
 
--- ❌ Bad: Wrong data types
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,           -- Sequential, predictable
-  email TEXT,                      -- Too broad
-  age VARCHAR(3),                  -- Should be numeric
-  balance FLOAT,                   -- Precision issues
-  metadata TEXT,                   -- Should be JSONB
-  created_at TIMESTAMP             -- No timezone
-);
-```
-
-### MongoDB
-
-```typescript
-// ✅ Good: Well-structured document
-interface User {
-  _id: ObjectId
-  email: string
-  profile: {
-    firstName: string
-    lastName: string
-    age: number
-  }
-  addresses: Array<{
-    type: 'home' | 'work'
-    street: string
-    city: string
-    zipCode: string
-  }>
-  createdAt: Date
-  updatedAt: Date
-}
-
-// ❌ Bad: Flat structure with arrays of primitives
-interface BadUser {
-  _id: ObjectId
-  email: string
-  firstName: string
-  lastName: string
-  addressTypes: string[]      // Separate from addresses
-  streets: string[]
-  cities: string[]
-}
-```
-
-## Indexing Strategies
-
-### Single Column Index
-
-```sql
--- For queries filtering by email
-CREATE INDEX idx_users_email ON users(email);
-
-SELECT * FROM users WHERE email = 'user@example.com';
-```
-
-### Composite Index
-
-```sql
--- For queries filtering by multiple columns
-CREATE INDEX idx_orders_user_status ON orders(user_id, status);
-
-SELECT * FROM orders
-WHERE user_id = '123' AND status = 'pending';
-```
-
-### Partial Index
-
-```sql
--- Index only active users
-CREATE INDEX idx_active_users ON users(email)
-WHERE status = 'active';
-```
-
-### Covering Index
-
-```sql
--- Include all columns needed by query
-CREATE INDEX idx_users_email_name ON users(email)
-INCLUDE (first_name, last_name);
-
--- Query can be satisfied by index alone
-SELECT first_name, last_name FROM users
-WHERE email = 'user@example.com';
-```
-
-### Full-Text Search Index
-
-```sql
--- PostgreSQL full-text search
-CREATE INDEX idx_posts_search ON posts
-USING GIN (to_tsvector('english', title || ' ' || content));
-
-SELECT * FROM posts
-WHERE to_tsvector('english', title || ' ' || content)
-      @@ to_tsquery('english', 'database & design');
-```
-
-## Query Optimization
-
-### Explain Plans
-
-```sql
--- Analyze query performance
-EXPLAIN ANALYZE
-SELECT u.name, COUNT(o.id) as order_count
-FROM users u
-LEFT JOIN orders o ON o.user_id = u.id
-WHERE u.created_at > '2024-01-01'
-GROUP BY u.id, u.name;
-```
-
-### Avoid N+1 Queries
-
-```typescript
-// ❌ Bad: N+1 query problem
-const users = await db.users.findAll()
-for (const user of users) {
-  user.orders = await db.orders.find({ userId: user.id }) // N queries
-}
-
-// ✅ Good: Join or batch load
-const users = await db.users.findAll({
-  include: [{ model: db.orders }]
-})
-
-// ✅ Good: DataLoader pattern
-const orderLoader = new DataLoader(async (userIds) => {
-  const orders = await db.orders.find({ userId: { $in: userIds } })
-  return userIds.map(id => orders.filter(o => o.userId === id))
-})
-```
-
-### Use Proper JOINs
-
-```sql
--- ✅ Good: Use appropriate JOIN type
-SELECT u.name, o.total
-FROM users u
-INNER JOIN orders o ON o.user_id = u.id
-WHERE o.status = 'completed';
-
--- ❌ Bad: Cartesian product then filter
-SELECT u.name, o.total
-FROM users u, orders o
-WHERE u.id = o.user_id AND o.status = 'completed';
-```
+For detailed indexing strategies and query optimization:
+- **Index types and strategies**: See [references/indexing.md](references/indexing.md)
+- **Query optimization techniques**: See [references/indexing.md](references/indexing.md)
+- **N+1 query prevention**: See [references/indexing.md](references/indexing.md)
 
 ## Partitioning Strategies
 
@@ -374,114 +219,16 @@ CREATE TABLE events_1 PARTITION OF events
 
 ## Migration Best Practices
 
-### Safe Migrations
+For comprehensive migration strategies and patterns:
+- **Safe migration techniques**: See [references/migrations.md](references/migrations.md)
+- **Backward compatible changes**: See [references/migrations.md](references/migrations.md)
+- **Batched updates**: See [references/migrations.md](references/migrations.md)
+- **Rollback strategies**: See [references/migrations.md](references/migrations.md)
 
-```sql
--- ✅ Good: Add column with default (no lock)
-ALTER TABLE users ADD COLUMN status VARCHAR(20) DEFAULT 'active';
+## Database Selection
 
--- ✅ Good: Add index concurrently (PostgreSQL)
-CREATE INDEX CONCURRENTLY idx_users_email ON users(email);
-
--- ❌ Bad: Locks table during operation
-ALTER TABLE users ADD COLUMN status VARCHAR(20) NOT NULL;
-CREATE INDEX idx_users_email ON users(email);
-```
-
-### Backward Compatible Changes
-
-```sql
--- Step 1: Add new column (nullable)
-ALTER TABLE users ADD COLUMN new_email VARCHAR(255);
-
--- Step 2: Backfill data
-UPDATE users SET new_email = email;
-
--- Step 3: Make it required
-ALTER TABLE users ALTER COLUMN new_email SET NOT NULL;
-
--- Step 4: Add constraint
-ALTER TABLE users ADD CONSTRAINT unique_new_email UNIQUE (new_email);
-
--- Step 5: Drop old column (after code deploy)
-ALTER TABLE users DROP COLUMN email;
-```
-
-## Database Selection Guide
-
-### PostgreSQL
-
-**Use when:**
-- Complex queries and JOINs
-- ACID transactions required
-- Strong consistency needed
-- JSON document support needed
-- GIS data (PostGIS)
-- Full-text search
-
-**Pros:**
-- Feature-rich, JSONB support
-- Strong consistency
-- Excellent performance
-- Extensible
-
-**Cons:**
-- Vertical scaling limits
-- Complex replication setup
-
-### MySQL
-
-**Use when:**
-- Read-heavy workloads
-- Simple queries
-- Wide hosting support needed
-- WordPress/PHP ecosystem
-
-**Pros:**
-- Fast reads
-- Wide adoption
-- Good replication
-
-**Cons:**
-- Less feature-rich than PostgreSQL
-- InnoDB limitations
-
-### MongoDB
-
-**Use when:**
-- Flexible schema needed
-- Rapid iteration
-- Horizontal scaling required
-- Document-oriented data
-
-**Pros:**
-- Flexible schema
-- Easy horizontal scaling
-- Good for prototyping
-
-**Cons:**
-- Eventual consistency
-- Memory intensive
-- Complex aggregations harder
-
-### Redis
-
-**Use when:**
-- Caching needed
-- Session storage
-- Real-time leaderboards
-- Pub/sub messaging
-- Rate limiting
-
-**Pros:**
-- Extremely fast
-- Rich data structures
-- Persistence options
-
-**Cons:**
-- Memory-only (mostly)
-- Single-threaded
-- Not for primary storage
+For detailed comparison and selection guidance:
+- See [references/data-types.md](references/data-types.md) for PostgreSQL, MySQL, MongoDB, and Redis comparison
 
 ## Security Best Practices
 

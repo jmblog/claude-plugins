@@ -1,13 +1,9 @@
 ---
-name: ux-growth
+name: improving-ux
 description: "Analyze and improve user experience and growth using evidence-based UX psychology principles. Use when users request: (1) UX analysis of websites or applications, (2) Growth optimization recommendations, (3) Conversion rate improvement strategies, (4) Psychological design pattern applications, (5) User behavior analysis, or (6) Evidence-based design improvements. Applies cognitive biases, motivational techniques, and psychological effects to enhance user engagement and business metrics."
 ---
 
 # UX Growth
-
-## Overview
-
-This skill provides evidence-based UX psychology principles and analysis frameworks to improve user experience, engagement, and growth metrics. It combines cognitive science, behavioral psychology, and design best practices to create actionable recommendations for digital products.
 
 ## Core Analysis Workflow
 
