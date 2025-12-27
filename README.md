@@ -17,9 +17,9 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 /plugin update
 
 # Or install specific skills
-/plugin install typescript-review@claude-skills
-/plugin install api-design@claude-skills
-/plugin install test-strategy@claude-skills
+/plugin install reviewing-typescript@claude-skills
+/plugin install designing-apis@claude-skills
+/plugin install planning-tests@claude-skills
 ```
 
 ### Update skills
@@ -28,7 +28,7 @@ To get the latest version of skills from the marketplace:
 
 ```bash
 # Update a specific skill
-/plugin update ux-growth@claude-skills
+/plugin update improving-ux@claude-skills
 
 # Or update all plugins/skills from all marketplaces
 /plugin update
@@ -40,15 +40,15 @@ After updating, restart Claude Code to load the changes.
 
 ### TypeScript Development
 
-- **typescript-review** - Review and improve TypeScript code quality, type safety, and best practices
-- **api-design** - Design and review REST/GraphQL APIs with best practices, consistency, and scalability
-- **test-strategy** - Plan and implement comprehensive testing strategies for software projects
-- **architecture-review** - Review and design software architecture for scalability, maintainability, and best practices
-- **database-design** - Design and review database schemas, queries, and data models for optimal performance and integrity
+- **reviewing-typescript** - Review and improve TypeScript code quality, type safety, and best practices
+- **designing-apis** - Design and review REST/GraphQL APIs with best practices, consistency, and scalability
+- **planning-tests** - Plan and implement comprehensive testing strategies for software projects
+- **reviewing-architecture** - Review and design software architecture for scalability, maintainability, and best practices
+- **designing-databases** - Design and review database schemas, queries, and data models for optimal performance and integrity
 
 ### UX & Design
 
-- **ux-growth** - Analyze and improve user experience and growth using evidence-based UX psychology principles
+- **improving-ux** - Analyze and improve user experience and growth using evidence-based UX psychology principles
 
 ## Usage
 
@@ -63,7 +63,7 @@ claude-skills/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── skills/
-│   └── ux-growth/
+│   └── improving-ux/
 │       ├── SKILL.md
 │       └── references/
 │           ├── checklist.md
