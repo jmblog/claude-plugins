@@ -17,9 +17,9 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 /plugin update
 
 # Or install specific skills
-/plugin install reviewing-typescript@claude-plugins
-/plugin install designing-apis@claude-plugins
-/plugin install planning-tests@claude-plugins
+/plugin install reviewing-typescript@jmblog-plugins
+/plugin install designing-apis@jmblog-plugins
+/plugin install planning-tests@jmblog-plugins
 ```
 
 ### Update skills
@@ -28,7 +28,7 @@ To get the latest version of skills from the marketplace:
 
 ```bash
 # Update a specific skill
-/plugin update improving-ux@claude-plugins
+/plugin update improving-ux@jmblog-plugins
 
 # Or update all plugins/skills from all marketplaces
 /plugin update
