@@ -56,10 +56,10 @@ This validates:
 
 ```bash
 # Add the marketplace
-/plugin marketplace add /Users/jimbo/Projects/jmblog/claude-skills
+/plugin marketplace add /Users/jimbo/Projects/jmblog/claude-plugins
 
 # Install a skill
-/plugin install ux-growth@claude-skills
+/plugin install ux-growth@claude-plugins
 ```
 
 ## Development Workflow
@@ -79,7 +79,7 @@ This validates:
 1. Edit files in `skills/skill-name/`
 2. **Always validate**: `claude plugin validate .`
 3. Commit and push to GitHub
-4. Users update via: `/plugin update skill-name@claude-skills` and restart Claude Code
+4. Users update via: `/plugin update skill-name@claude-plugins` and restart Claude Code
 
 ### Critical Rules
 

@@ -1,4 +1,4 @@
-# Claude Skills
+# Claude Plugins
 
 Personal collection of custom Claude Code skills for enhanced productivity and specialized workflows.
 
@@ -7,7 +7,7 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 ### Add this marketplace to Claude Code
 
 ```bash
-/plugin marketplace add https://github.com/jmblog/claude-skills.git
+/plugin marketplace add https://github.com/jmblog/claude-plugins.git
 ```
 
 ### Install skills
@@ -17,9 +17,9 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 /plugin update
 
 # Or install specific skills
-/plugin install reviewing-typescript@claude-skills
-/plugin install designing-apis@claude-skills
-/plugin install planning-tests@claude-skills
+/plugin install reviewing-typescript@claude-plugins
+/plugin install designing-apis@claude-plugins
+/plugin install planning-tests@claude-plugins
 ```
 
 ### Update skills
@@ -28,7 +28,7 @@ To get the latest version of skills from the marketplace:
 
 ```bash
 # Update a specific skill
-/plugin update improving-ux@claude-skills
+/plugin update improving-ux@claude-plugins
 
 # Or update all plugins/skills from all marketplaces
 /plugin update
@@ -59,7 +59,7 @@ Once installed, skills will automatically trigger when you make relevant request
 ### Directory Structure
 
 ```
-claude-skills/
+claude-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── skills/
@@ -77,7 +77,7 @@ Before pushing changes to GitHub, validate the marketplace configuration:
 
 ```bash
 # Navigate to the repository
-cd /path/to/claude-skills
+cd /path/to/claude-plugins
 
 # Validate marketplace.json
 claude plugin validate .
