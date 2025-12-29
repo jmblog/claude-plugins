@@ -19,7 +19,7 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 # Or install specific skills
 /plugin install reviewing-typescript@jmblog-plugins
 /plugin install designing-apis@jmblog-plugins
-/plugin install designing-ui@jmblog-plugins
+/plugin install designing-with-shig@jmblog-plugins
 /plugin install planning-tests@jmblog-plugins
 ```
 
@@ -50,7 +50,7 @@ After updating, restart Claude Code to load the changes.
 ### UX & Design
 
 - **improving-ux** - Analyze and improve user experience and growth using evidence-based UX psychology principles
-- **designing-ui** - Design and analyze user interfaces using Sociomedia's Human Interface Guidelines
+- **designing-with-shig** - Design and analyze user interfaces using Sociomedia's Human Interface Guidelines (SHIG)
 
 ## Usage
 
@@ -70,7 +70,7 @@ claude-plugins/
 │   │   └── references/
 │   │       ├── checklist.md
 │   │       └── principles.md
-│   ├── designing-ui/
+│   ├── designing-with-shig/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       ├── guidelines-overview.md

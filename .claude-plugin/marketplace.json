@@ -39,9 +39,9 @@
       "description": "Design and review database schemas, queries, and data models for optimal performance and integrity"
     },
     {
-      "name": "designing-ui",
-      "source": "./skills/designing-ui",
-      "description": "Design and analyze user interfaces using Sociomedia's Human Interface Guidelines"
+      "name": "designing-with-shig",
+      "source": "./skills/designing-with-shig",
+      "description": "Design and analyze user interfaces using Sociomedia's Human Interface Guidelines (SHIG)"
     }
   ]
 }

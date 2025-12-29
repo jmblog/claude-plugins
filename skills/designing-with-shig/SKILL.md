@@ -1,6 +1,6 @@
 ---
-name: designing-ui
-description: "Designs and analyzes user interfaces using Sociomedia's 100 Human Interface Guidelines. Use when working with UI design, interface patterns, Mental Model, Signifiers, Mapping, Consistency, visual hierarchy, navigation design, form design, touch interfaces, or accessibility. Applies concrete design patterns for simplification, cognitive principles, information architecture, and interaction design. Complements improving-ux by focusing on structural patterns rather than psychological persuasion."
+name: designing-with-shig
+description: "Designs and analyzes user interfaces using Sociomedia's 100 Human Interface Guidelines (SHIG). Use when working with UI design, interface patterns, Mental Model, Signifiers, Mapping, Consistency, visual hierarchy, navigation design, form design, touch interfaces, or accessibility. Applies concrete design patterns for simplification, cognitive principles, information architecture, and interaction design. Complements improving-ux by focusing on structural patterns rather than psychological persuasion."
 ---
 
 # UI Design Guidelines
