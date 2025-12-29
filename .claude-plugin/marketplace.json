@@ -37,6 +37,11 @@
       "name": "designing-databases",
       "source": "./skills/designing-databases",
       "description": "Design and review database schemas, queries, and data models for optimal performance and integrity"
+    },
+    {
+      "name": "designing-ui",
+      "source": "./skills/designing-ui",
+      "description": "Design and analyze user interfaces using Sociomedia's Human Interface Guidelines"
     }
   ]
 }

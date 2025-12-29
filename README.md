@@ -19,6 +19,7 @@ Personal collection of custom Claude Code skills for enhanced productivity and s
 # Or install specific skills
 /plugin install reviewing-typescript@jmblog-plugins
 /plugin install designing-apis@jmblog-plugins
+/plugin install designing-ui@jmblog-plugins
 /plugin install planning-tests@jmblog-plugins
 ```
 
@@ -49,6 +50,7 @@ After updating, restart Claude Code to load the changes.
 ### UX & Design
 
 - **improving-ux** - Analyze and improve user experience and growth using evidence-based UX psychology principles
+- **designing-ui** - Design and analyze user interfaces using Sociomedia's Human Interface Guidelines
 
 ## Usage
 
@@ -63,11 +65,19 @@ claude-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── skills/
-│   └── improving-ux/
-│       ├── SKILL.md
-│       └── references/
-│           ├── checklist.md
-│           └── principles.md
+│   ├── improving-ux/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── checklist.md
+│   │       └── principles.md
+│   ├── designing-ui/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── guidelines-overview.md
+│   │       ├── cognitive-principles.md
+│   │       ├── simplification.md
+│   │       └── ... (11 total reference files)
+│   └── ... (other skills)
 └── README.md
 ```
 
