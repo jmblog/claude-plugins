@@ -1,6 +1,7 @@
 ---
 name: designing-databases
 description: "Design and review database schemas, queries, and data models for optimal performance and integrity. Use when users request: (1) Database schema design, (2) Data modeling, (3) Query optimization, (4) Index strategy, (5) Migration planning, or (6) Database technology selection. Applies normalization principles, indexing strategies, and database best practices for SQL and NoSQL databases."
+user-invocable: true
 ---
 
 # Database Design

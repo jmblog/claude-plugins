@@ -1,6 +1,7 @@
 ---
 name: planning-tests
 description: "Plan and implement comprehensive testing strategies for software projects. Use when users request: (1) Test planning and strategy, (2) Test case generation, (3) Testing best practices, (4) Test coverage improvement, (5) Mock/stub design, or (6) TDD/BDD guidance. Applies unit, integration, E2E testing principles, and test automation best practices."
+user-invocable: true
 ---
 
 # Test Strategy
