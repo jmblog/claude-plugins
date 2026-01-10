@@ -1,7 +1,6 @@
 ---
 name: reviewing-architecture
 description: "Review and design software architecture for scalability, maintainability, and best practices. Use when users request: (1) Architecture review or design, (2) System design decisions, (3) Technology stack selection, (4) Scalability planning, (5) Microservices vs monolith decisions, or (6) Design pattern recommendations. Applies architectural patterns, SOLID principles, and industry best practices."
-user-invocable: true
 ---
 
 # Architecture Review

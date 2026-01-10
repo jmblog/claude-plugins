@@ -38,6 +38,7 @@ The marketplace.json uses a **parent plugin with skills array** pattern:
   "plugins": [
     {
       "name": "jmblog-plugins",
+      "description": "Description of the plugin...",
       "source": "./",
       "strict": false,
       "skills": [
@@ -118,6 +119,7 @@ This validates:
 - `name` must match the directory name and marketplace.json entry
 - `description` should explain when the skill triggers and what it does
 - Description format: "Use when users request: (1) X, (2) Y, (3) Z..."
+- Do NOT include `user-invocable: true` field (it causes skills to not appear in slash commands)
 
 **Documentation structure**:
 - Keep SKILL.md focused on workflows and quick reference
