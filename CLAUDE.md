@@ -29,13 +29,38 @@ Skills consist of:
    - Examples and patterns
    - These are referenced from the main SKILL.md
 
+### marketplace.json Structure
+
+The marketplace.json uses a **parent plugin with skills array** pattern:
+
+```json
+{
+  "plugins": [
+    {
+      "name": "jmblog-plugins",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/improving-ux",
+        "./skills/reviewing-typescript",
+        ...
+      ]
+    }
+  ]
+}
+```
+
+**Important**: Each skill is listed in the `skills` array, NOT as a separate plugin entry.
+
 ### Current Skills
 
-**ux-growth**: UX analysis and optimization using evidence-based psychology principles
-- Provides 25+ UX psychology principles
-- Systematic analysis framework with 10 evaluation categories
-- Implementation patterns and anti-patterns
-- Located in: `skills/ux-growth/`
+- **improving-ux**: UX analysis using evidence-based psychology principles
+- **reviewing-typescript**: TypeScript code review and best practices
+- **designing-apis**: REST/GraphQL API design and review
+- **planning-tests**: Testing strategy planning and implementation
+- **reviewing-architecture**: Software architecture review
+- **designing-databases**: Database schema and query design
+- **designing-with-shig**: UI design using Sociomedia's Human Interface Guidelines
 
 ## Common Commands
 
@@ -70,7 +95,7 @@ This validates:
 2. Create `skills/skill-name/SKILL.md` with YAML frontmatter
 3. Add supporting files in `skills/skill-name/references/` if needed
 4. Update `.claude-plugin/marketplace.json`:
-   - Add entry to `plugins` array with `name`, `source` (must use `./` prefix), and `description`
+   - Add path to the `skills` array: `"./skills/skill-name"`
 5. **Always validate**: `claude plugin validate .`
 6. Commit and push to GitHub
 
@@ -83,10 +108,11 @@ This validates:
 
 ### Critical Rules
 
-**marketplace.json validation**:
-- `source` paths MUST start with `./` (e.g., `./skills/ux-growth` not `skills/ux-growth`)
+**marketplace.json structure**:
+- Use a single parent plugin with a `skills` array (NOT separate plugin entries per skill)
+- Plugin `source` MUST be `"./"` (root directory)
+- Skill paths in the array MUST start with `./` (e.g., `"./skills/improving-ux"`)
 - Always run `claude plugin validate .` before committing
-- The plugins array contains plugin definitions, not skill definitions
 
 **Skill YAML frontmatter**:
 - `name` must match the directory name and marketplace.json entry
