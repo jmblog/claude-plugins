@@ -20,7 +20,8 @@
         "./skills/planning-tests",
         "./skills/reviewing-architecture",
         "./skills/designing-databases",
-        "./skills/designing-with-shig"
+        "./skills/designing-with-shig",
+        "./skills/test-skill"
       ]
     }
   ]
