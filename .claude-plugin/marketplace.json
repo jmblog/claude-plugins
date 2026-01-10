@@ -9,39 +9,18 @@
   },
   "plugins": [
     {
-      "name": "improving-ux",
-      "source": "./skills/improving-ux",
-      "description": "Analyze and improve user experience and growth using evidence-based UX psychology principles"
-    },
-    {
-      "name": "reviewing-typescript",
-      "source": "./skills/reviewing-typescript",
-      "description": "Review and improve TypeScript code quality, type safety, and best practices"
-    },
-    {
-      "name": "designing-apis",
-      "source": "./skills/designing-apis",
-      "description": "Design and review REST/GraphQL APIs with best practices, consistency, and scalability"
-    },
-    {
-      "name": "planning-tests",
-      "source": "./skills/planning-tests",
-      "description": "Plan and implement comprehensive testing strategies for software projects"
-    },
-    {
-      "name": "reviewing-architecture",
-      "source": "./skills/reviewing-architecture",
-      "description": "Review and design software architecture for scalability, maintainability, and best practices"
-    },
-    {
-      "name": "designing-databases",
-      "source": "./skills/designing-databases",
-      "description": "Design and review database schemas, queries, and data models for optimal performance and integrity"
-    },
-    {
-      "name": "designing-with-shig",
-      "source": "./skills/designing-with-shig",
-      "description": "Design and analyze user interfaces using Sociomedia's Human Interface Guidelines (SHIG)"
+      "name": "jmblog-plugins",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/improving-ux",
+        "./skills/reviewing-typescript",
+        "./skills/designing-apis",
+        "./skills/planning-tests",
+        "./skills/reviewing-architecture",
+        "./skills/designing-databases",
+        "./skills/designing-with-shig"
+      ]
     }
   ]
 }
