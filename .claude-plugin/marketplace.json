@@ -10,6 +10,7 @@
   "plugins": [
     {
       "name": "jmblog-plugins",
+      "description": "Personal collection of custom Claude Code skills for UX, TypeScript, API design, testing, architecture, databases, and UI guidelines",
       "source": "./",
       "strict": false,
       "skills": [
