@@ -42,7 +42,7 @@ This checklist provides a systematic framework for reviewing TypeScript code qua
 - [ ] **No implicit any**: Are all `any` types explicit and justified?
 - [ ] **unknown over any**: Is `unknown` used when type is truly unknown?
 - [ ] **Type assertions**: Are `as` assertions necessary and safe?
-- [ ] **Non-null assertions**: Are `!` assertions guarded properly?
+- [ ] **Non-null assertions**: Are non-null assertion operators guarded properly?
 - [ ] **Any comments**: Are unavoidable `any` uses documented?
 
 ### Function Type Safety

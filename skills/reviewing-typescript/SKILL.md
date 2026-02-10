@@ -44,7 +44,7 @@ When reviewing TypeScript code:
 - Type assertions (`as`) that bypass type checking
 - Missing return type annotations on public functions
 - Implicit any in function parameters
-- Non-null assertions (`!`) without proper guards
+- Non-null assertion operator without proper guards
 
 **Best Practices:**
 - Enable strict mode in tsconfig.json
